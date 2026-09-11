@@ -145,7 +145,7 @@ int executePipe(char **args)
 
         if (execvp(args1[0], args1) < 0)
         {
-            perror("execution failed");
+            perror("Execution failed");
             exit(EXIT_FAILURE);
         }
         exit(EXIT_SUCCESS);
@@ -161,7 +161,7 @@ int executePipe(char **args)
 
         if (execvp(args2[0], args2) < 0)
         {
-            perror("execution failed");
+            perror("Execution failed");
             exit(EXIT_FAILURE);
         }
         exit(EXIT_SUCCESS);
@@ -189,7 +189,7 @@ int executeCustomCommand(char **args)
     case 0:
         if (execvp(args[0], args) < 0)
         {
-            perror("execution failed");
+            perror("Execution failed");
             exit(EXIT_FAILURE);
         }
         exit(EXIT_SUCCESS);
@@ -200,8 +200,8 @@ int executeCustomCommand(char **args)
 
 int main()
 {
-    char input[MAX_INPUT];
-    char *tokens[MAX_TOKENS];
+    char    input[MAX_INPUT];
+    char    *tokens[MAX_TOKENS];
 
     while (1)
     {
